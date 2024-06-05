@@ -28,6 +28,7 @@ body {
   background-size: 100% 100%, 30% 30%, 100% 100%;
   min-height: 100vh;
   margin: 0;
+  padding: 0 1rem; /* Add padding for small screens */
 }
 
 header {
@@ -67,6 +68,7 @@ h1 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
 }
 
 #players li {
@@ -349,5 +351,71 @@ ol {
   }
   100% {
     transform: scale(1);
+  }
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  #game-board button {
+    width: 6rem;
+    height: 6rem;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  #players li {
+    align-items: center;
+    width: 30%;
+    border: 2px solid transparent;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  #pre-game button {
+    font-size: 3rem;
+  }
+  #game-board button {
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+  }
+  #game-over h2 {
+    font-size: 3rem;
+  }
+  #game-over p {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #players li {
+    align-items: center;
+    width: 100%;
+    border: 2px solid transparent;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+  #pre-game button {
+    font-size: 2.5rem;
+  }
+  #game-board button {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+  #game-over h2 {
+    font-size: 2.5rem;
+  }
+  #game-over p {
+    font-size: 1.25rem;
+  }
+  #game-over button {
+    font-size: 1.25rem;
   }
 }
